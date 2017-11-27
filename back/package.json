@@ -1,0 +1,19 @@
+{
+  "name": "cdpn-devops",
+  "version": "1.0.0",
+  "description": "Un formulaire d'inscription",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaol/cdpn-devops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaol/cdpn-devops/issues"
+  },
+  "homepage": "https://github.com/Aaol/cdpn-devops#readme"
+}
