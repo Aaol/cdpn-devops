@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'app';
   private apiUrl = 'http://localhost:4021/validate/';
@@ -48,20 +49,20 @@ export class AppComponent {
       const reqPassword = this.http.post(this.apiUrl+'password', JSON.stringify({
         password: this.password
       }), {headers:headers})
-        .subscribe(
-          res => {
-            if(res.json() === true )
-            {
-              this.passwordVerif = true;
-              this.validRegister();
-            }else{
-              this.passwordError = "Password must be at least 5 charateres long and must contains 1 uppercase"
-            }
-          },
-          err => {
-            console.log("Error occured");
+      .subscribe(
+        res => {
+          if(res.json() === true )
+          {
+            this.passwordVerif = true;
+            this.validRegister();
+          }else{
+            this.passwordError = "Password must be at least 5 charateres long and must contains 1 uppercase"
           }
-        );
+        },
+        err => {
+          console.log("Error occured");
+        }
+      );      
   }
   
   validRegister(){
@@ -69,4 +70,7 @@ export class AppComponent {
         this.registered = true;
     }
   }
+
+  
 }
+
